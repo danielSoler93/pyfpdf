@@ -1,0 +1,29 @@
+# must do conda install -c NostrumBioDiscovery pele_platform 
+package:
+  name: fpdf
+  version: "1.7.2"
+
+about:
+  home: https://github.com/danielSoler93/pyfpdf
+  license: Apache
+  license_file: LICENSE
+  summary: Simple PDF generation for Python
+
+source:
+  path: ../
+
+build:
+  script: python -m pip install . --no-deps -vv
+  number: 0
+
+requirements:
+  host:
+    - python
+
+  run:
+    # Base dependencies
+    - python
+
+test:
+  imports:
+    - fpdf
